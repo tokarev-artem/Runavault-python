@@ -50,7 +50,12 @@ class RunaVaultStack(Stack):
                 "email": {"required": True, "mutable": True},
                 "given_name": {"required": True, "mutable": True},
                 "family_name": {"required": True, "mutable": True}
-            }
+            },
+            mfa=cognito.Mfa.REQUIRED,  
+            mfa_second_factor=cognito.MfaSecondFactor(
+                otp=True,  
+                sms=False  
+            ),
         )
 
         # Create Cognito Groups
