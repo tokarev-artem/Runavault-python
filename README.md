@@ -20,7 +20,7 @@ RunaVault is a secure, serverless password management application built using AW
 
 ## Features
 
-- **User Management**: Create and manage users and groups via an admin panel or Terraform. Note: The user must be added to Admin group to have access to Admin panel.
+- **User Management**: Create and manage users and groups via an admin panel. Note: The user must be added to Admin group to have access to Admin panel.
 - **Multi-Factor Authentication**: All users are required to enable MFA by default for enhanced account security.
 - **Secret Management**: Store, edit, and delete encrypted secrets with optional tags and subdirectories.
 - **Sharing**: Share secrets with individual users or groups with role-based permissions (Viewer/Editor).
@@ -43,7 +43,7 @@ RunaVault is a secure, serverless password management application built using AW
 - **Dependencies**: `react-select`, `react-oidc-context`, `@fortawesome/react-fontawesome`.
 
 ### Backend
-- **Serverless**: Built using AWS Lambda Graviton2 for compute, deployed via Terraform.
+- **Serverless**: Built using AWS Lambda Graviton2 for compute.
 - **Authentication**: AWS Cognito for user authentication and group management.
 - **API**: AWS API Gateway for RESTful endpoints, secured with Cognito JWT tokens.
 - **Storage**: AWS DynamoDB for storing encrypted secrets and metadata. With enabled [Point-in-time-recovery](https://aws.amazon.com/dynamodb/pitr/)
