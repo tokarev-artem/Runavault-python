@@ -171,9 +171,6 @@ class RunaVaultStack(Stack):
             projection_type=dynamodb.ProjectionType.ALL
         )
 
-        # Output table name
-        # CfnOutput(self, "PasswordsTableName", value=self.passwords_table.table_name)
-
     def create_kms(self):
         # Create KMS key for encryption
         self.kms_key = kms.Key(
@@ -426,8 +423,6 @@ class RunaVaultStack(Stack):
                     )
                 )
 
-        # for lambda_name, fn in self.lambda_functions.items():
-        #     CfnOutput(self, f"{lambda_name.capitalize()}LambdaArn", value=fn.function_arn)
 
     def create_api_gateway(self):
         from aws_cdk import aws_apigatewayv2 as apigwv2
@@ -535,11 +530,6 @@ class RunaVaultStack(Stack):
 
             apigwv2.CfnRoute(**route_args)
 
-        # Output API endpoint
-        # CfnOutput(
-        #     self, "API_GATEWAY_ENDPOINT",
-        #     value=f"https://{self.http_api.ref}.execute-api.{self.region}.amazonaws.com"
-        # )
         CfnOutput(
             self, "API_GATEWAY_ENDPOINT",
             value=f"https://{self.http_api.ref}.execute-api.{self.region}.amazonaws.com",
