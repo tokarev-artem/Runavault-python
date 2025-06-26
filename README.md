@@ -90,7 +90,7 @@ RunaVault's backend is designed to operate within AWS's free tier, making it cos
 
 6. Create .env file to deploy frontend
       ```bash
-   $ cp frontend/.env.example frontend/.env
+   $ cp ../frontend/.env.example ../frontend/.env
    ```
 7. Update .env file with values from cdk output
    ```bash
@@ -99,7 +99,7 @@ RunaVault's backend is designed to operate within AWS's free tier, making it cos
    REACT_APP_AWS_REGION=us-east-1
    REACT_APP_COGNITO_CLIENT_ID=<COGNITOCLIENTID>
    REACT_APP_IDENTITY_POOL_ID=<IDENTITYPOOLID>
-   REACT_APP_COGNITO_DOMAIN=https://runavault-<account_id>.auth.<region>.amazoncognito.com
+   REACT_APP_COGNITO_DOMAIN=COGNITODOMAIN
    REACT_APP_COGNITO_ID=<COGNITOID>
    ```
 
