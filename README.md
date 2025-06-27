@@ -58,6 +58,7 @@ RunaVault's backend is designed to operate within AWS's free tier, making it cos
 - **AWS Account**: Access to free-tier services (Lambda, Cognito, API Gateway, CloudFront, DynamoDB, KMS, S3, ACM, Route 53).
 - **AWS CDK**: For infrastructure deployment (or OpenTofu as an alternative).
 - **AWS CLI**: Configured with credentials for deployment.
+- **Docker**: To build lambda layers locally
 
 ## Setup and Deployment
 
