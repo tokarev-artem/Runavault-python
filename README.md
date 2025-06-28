@@ -18,6 +18,10 @@ RunaVault is a secure, serverless password management application built using AW
 
 ![RunaVault AWS Architecture](img/runavault-diagram.png)
 
+## Lambda functions are being used for:
+- CRUD operations on Dynamodb table
+- CRUD operations on Cognito user pool
+
 ## Features
 
 - **User Management**: Create and manage users and groups via an admin panel. Note: The user must be added to Admin group to have access to Admin panel.
